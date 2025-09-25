@@ -43,7 +43,7 @@
     }
     h2 {
       font-size: 1.1em;
-      color: #004080;
+      color: #c62828;
       margin-top: 20px;
     }
     p {
@@ -51,6 +51,13 @@
     }
     .label {
       font-weight: bold;
+    }
+    .emergency-box {
+      border: 2px solid #c62828;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #fff5f5;
     }
   </style>
 </head>
@@ -70,10 +77,12 @@
     <p><span class="label">CACES :</span> R486A (12/2025)</p>
     <p><span class="label">Contact :</span> <a href="tel:0673932517">0673932517</a></p>
 
-    <h2>🔴 Informations médicales d'urgence</h2>
-    <p><span class="label">Allergie connue :</span> Pénicilline</p>
-    <p><span class="label">Médicament à éviter :</span> Cortisol</p>
-    <p><span class="label">Groupe sanguin :</span> AB négatif</p>
+    <div class="emergency-box">
+      <h2>🔴 Informations médicales d'urgence</h2>
+      <p><span class="label">Allergie connue :</span> Pénicilline</p>
+      <p><span class="label">Médicament à éviter :</span> Cortisol</p>
+      <p><span class="label">Groupe sanguin :</span> AB négatif</p>
+    </div>
   </div>
 </body>
 </html>
