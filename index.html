@@ -19,6 +19,7 @@
       padding: 20px;
       max-width: 600px;
       margin: auto;
+      display: none; /* Caché tant que le mot de passe n’est pas saisi */
     }
     .header {
       display: flex;
@@ -59,7 +60,24 @@
       margin-top: 20px;
       background-color: #fff5f5;
     }
+    .consent {
+      font-size: 0.8em;
+      color: #888;
+      margin-top: 20px;
+      text-align: center;
+    }
   </style>
+
+  <script>
+    window.onload = function () {
+      const password = prompt("Entrez le mot de passe pour accéder à la fiche :");
+      if (password === "Inform@Secu2025") {
+        document.querySelector('.card').style.display = 'block';
+      } else {
+        document.body.innerHTML = "<h2 style='color:red; text-align:center;'>⛔️ Accès refusé</h2>";
+      }
+    };
+  </script>
 </head>
 <body>
   <div class="card">
@@ -69,7 +87,7 @@
     </div>
     <h1>Fiche Électricien</h1>
     <p><span class="label">ID :</span> ELC-000123</p>
-    <p><span class="label">Nom :</span> Ismaïla THIOUB</p>
+    <p><span class="label">Nom :</span> Samboudiang THIOUB</p>
     <p><span class="label">Entreprise :</span> Electricité Travaux Techniques</p>
     <p><span class="label">Poste :</span> Chef d’équipe</p>
     <p><span class="label">Habilitations :</span> B1, B2V, BR</p>
@@ -82,6 +100,11 @@
       <p><span class="label">Allergie connue :</span> Pénicilline</p>
       <p><span class="label">Médicament à éviter :</span> Cortisol</p>
       <p><span class="label">Groupe sanguin :</span> AB négatif</p>
+    </div>
+
+    <div class="consent">
+      Données affichées avec le consentement écrit du collaborateur,<br>
+      exclusivement à des fins de sécurité. Ne pas diffuser sans autorisation.
     </div>
   </div>
 </body>
